@@ -1,0 +1,58 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+/* Default CSS Reset */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+/* Changing HTML Scroll behavior for Smooth Scrolling Effect */
+html {
+	scroll-behavior: smooth;
+
+}
+
+/* Setting Default font for Body */
+body {
+	font-family: 'Poppins', sans-serif;
+
+}
+
+/* Hiding Scrollbar */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* hiddenElement Animation CSS properties */
+.hiddenElement {
+	opacity: 0;
+	transform: translateY(-20%);
+	transition: all 1.5s;
+}
+
+/* Fade-in Animation CSS properties */
+.showElement {
+	opacity: 1;
+	transform: translateY(0%);
+}
+
+/* Main Game paddles CSS properties */
+.paddle {
+	--position: 50;
+	top: calc(var(--position) * 1vh);
+}
+
+/* Main Game ball CSS properties */
+.ball {
+	--x: 50;
+	--y: 50;
+	left: calc(var(--x) * 1vw);
+	top: calc(var(--y) * 1vh);
+}
+
+/* Hiding Highscores scrollbar */
+#all-users-scores::-webkit-scrollbar {
+	display: none;
+}

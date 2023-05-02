@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./highscores.js"></script>
+    <script defer src="./animation.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="highscore" class="w-screen h-screen">
+        <nav
+            class="w-screen h-6 p-6 bg-white z-50 flex items-center justify-center border-b-2 border-black fixed top-0 left-0">
+            <a href="index.html">
+                <h1 class="text-2xl font-medium group">Ping P<span
+                        class="w-4 h-4 rounded-full bg-wihte border-[2px] border-black inline-block group-hover:animate-bounce"></span>ng
+            </a>
+            </h1>
+        </nav>
+        <div class="w-full h-full flex flex-col gap-8 items-center justify-center">
+            <h1 class="hiddenElement delay-75 text-4xl font-base">Highscores</h1>
+            <div id="all-users-scores" class="w-11/12 md:w-1/2 h-4/6 p-4 overflow-x-scroll flex flex-col gap-4">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

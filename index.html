@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./script.js"></script>
+    <script defer src="./animation.js"></script>
+    <title>Ping Pong Game</title>
+</head>
+
+<body class="overflow-x-hidden">
+    <section id="home" class="w-screen h-screen">
+        <nav
+            class="w-screen h-6 p-6 bg-white z-50 flex items-center justify-center border-b-2 border-black fixed top-0 left-0">
+            <a href="#home">
+                <h1 class="text-2xl font-medium group">Ping P<span
+                        class="w-4 h-4 rounded-full bg-wihte border-[2px] border-black inline-block group-hover:animate-bounce"></span>ng
+            </a>
+            </h1>
+        </nav>
+        <section id="hero-section"
+            class="h-full flex flex-col gap-12 md:gap-0 md:flex-row items-center justify-between w-11/12 md:w-3/4 mx-auto mt-28 md:mt-0">
+            <main id="hero-text" class="flex flex-col gap-4 flex-1">
+                <h1 class="hiddenElement delay-75 text-8xl md:w-3/4 font-base"><span
+                        class="block md:inline-block">Ping</span> P<span
+                        class="w-16 h-16 animate-bounce rounded-full bg-white border-[8px] border-black inline-block"></span>ng
+                    Game..!</h1>
+                <span class="hiddenElement delay-150">
+                    <p class="opacity-50 text-2xl font-base w-full md:w-1/2">Play against the computer and try to
+                        win
+                        the game. Click
+                        below
+                        button to see how to play the game.
+                    </p>
+                </span>
+                <span class="flex items-center justify-start gap-8">
+                    <a class="hiddenElement delay-300 w-max" href="#how-to-play">
+                        <button
+                            class="bg-white w-max text-black p-4 mt-4 border-2 border-black hover:bg-black hover:text-white transition-colors">How
+                            to play..?
+                        </button>
+                    </a>
+                    <a class="mt-2 hiddenElement delay-500 w-max" href="/highscore.html">
+                        <span class="text-lg underline">Highscores</span>
+                    </a>
+                </span>
+            </main>
+            <main id="player-form flex-1 w-full">
+                <form id="form" class="hiddenElement flex flex-col gap-4 py-24 border-2 border-black px-12">
+                    <div>
+                        <h1 class="text-lg">Name</h1>
+                        <input type="text" id="name" name="name"
+                            class="w-full p-2 border-2 border-black  placeholder:text-black placeholder:opacity-50"
+                            required placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <h1 class="text-lg">Username</h1>
+                        <input type="text" id="username" name="username"
+                            class="w-full p-2 border-2 border-black placeholder:text-black placeholder:opacity-50"
+                            required placeholder="example123">
+                    </div>
+                    <button id="play-btn" type="submit"
+                        class="mt-4 bg-black p-4 flex gap-4 items-center justify-center">
+                        <h1 class="text-white">Play</h1>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-6 h-6 text-white">
+                            <path fill-rule="evenodd"
+                                d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </form>
+            </main>
+        </section>
+    </section>
+    <section id="how-to-play" class="w-screen h-screen flex items-center flex flex-col">
+        <h1 class="hiddenElement text-4xl mt-28">How to Play..!</h1>
+        <main class="h-full flex flex-col md:flex-row items-center justify-between w-full md:w-3/4">
+            <section class="md:w-1/2 flex relative flex-col gap-14 mt-12 md:mt-0">
+                <span class="hiddenElement absolute w-[2px] h-3/4 bg-black left-[27px] top-4"></span>
+                <div id="paddle-info" class="hiddenElement delay-0">
+                    <div class="flex gap-4 md:h-36 w-full p-4 transition-colors hover:bg-black group cursor-pointer">
+                        <button class="bg-black w-6 h-6 rounded-full z-50">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-6 h-6 text-white rotate-90">
+                                <path fill-rule="evenodd"
+                                    d="M3.75 12a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                        </button>
+                        <h1 class="md:w-2/3 w-11/12 text-xl group-hover:text-white">Use your mouse to move your Paddle,
+                            and try
+                            to
+                            bounce incoming Ball and
+                            continue playing the
+                            Game.
+                        </h1>
+                    </div>
+                </div>
+                <div id="ball-info" class="hiddenElement delay-150">
+                    <div
+                        class="hiddenElement flex gap-4 md:h-36 w-full p-4 transition-colors hover:bg-black group cursor-pointer">
+                        <button class="bg-black w-6 h-6 rounded-full flex items-center justify-center">
+                            <div class="border-2 border-white w-4 h-4 rounded-full z-50">
+                            </div>
+                        </button>
+                        <h1 class="md:w-2/3 w-11/12  text-xl group-hover:text-white">Don't miss the Ball or you'll lose
+                            the Game,
+                            Ball
+                            speed will increase as
+                            game continues.
+                        </h1>
+                    </div>
+                </div>
+                <div id="round-info" class="hiddenElement delay-300">
+                    <div
+                        class="hiddenElement flex gap-4 md:h-36 w-full p-4 transition-colors hover:bg-black group cursor-pointer">
+                        <button class="bg-black w-6 h-6 rounded-full z-50 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                class="w-4 h-4 text-white">
+                                <path fill-rule="evenodd"
+                                    d="M10 1c-1.828 0-3.623.149-5.371.435a.75.75 0 00-.629.74v.387c-.827.157-1.642.345-2.445.564a.75.75 0 00-.552.698 5 5 0 004.503 5.152 6 6 0 002.946 1.822A6.451 6.451 0 017.768 13H7.5A1.5 1.5 0 006 14.5V17h-.75C4.56 17 4 17.56 4 18.25c0 .414.336.75.75.75h10.5a.75.75 0 00.75-.75c0-.69-.56-1.25-1.25-1.25H14v-2.5a1.5 1.5 0 00-1.5-1.5h-.268a6.453 6.453 0 01-.684-2.202 6 6 0 002.946-1.822 5 5 0 004.503-5.152.75.75 0 00-.552-.698A31.804 31.804 0 0016 2.562v-.387a.75.75 0 00-.629-.74A33.227 33.227 0 0010 1zM2.525 4.422C3.012 4.3 3.504 4.19 4 4.09V5c0 .74.134 1.448.38 2.103a3.503 3.503 0 01-1.855-2.68zm14.95 0a3.503 3.503 0 01-1.854 2.68C15.866 6.449 16 5.74 16 5v-.91c.496.099.988.21 1.475.332z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                        </button>
+                        <h1 class="md:w-2/3 w-11/12  text-xl group-hover:text-white">There will be 3 rounds in Total, If
+                            you win
+                            2
+                            rounds you win the Game or
+                            if you lose Computer wins the Game.
+                        </h1>
+                    </div>
+                </div>
+            </section>
+            <section id="demo-game"
+                class="hiddenElement md:w-1/2 w-full p-4 md:h-full h-56 flex items-center justify-center">
+                <div class="border-2 border-black w-full md:h-1/2 h-full relative">
+                    <div id="score" class="absolute top-2 left-[50%] -translate-x-[50%] transition-transform">
+                        <h1>0 0</h1>
+                    </div>
+                    <div id="player-paddle"
+                        class="rounded-lg border-2 border-black w-2 h-1/4 absolute top-[50%] left-2 -translate-y-[50%] transition-colors">
+                    </div>
+                    <div id="ball"
+                        class="relative border-2 border-black w-4 h-4 top-[50%] left-[50%] rounded-full -translate-y-[50%] -translate-x-[50%]">
+                    </div>
+                    <div id="computer-paddle"
+                        class="rounded-lg border-2 border-black  w-2 h-1/4 absolute top-[50%] right-2 -translate-y-[50%] transition-colors">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="flex items-center justify-center p-4">
+            <h1 class="flex gap-2">Made with<span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path
+                            d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+                    </svg>
+                </span>by Rutvik & Nikhil</h1>
+        </footer>
+    </section>
+</body>
+
+</html>
