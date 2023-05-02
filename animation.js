@@ -9,7 +9,7 @@ const observer = new IntersectionObserver((entries) => {
     })
 })
 
-// Selecting all the Elements with hideElement class
+// Selecting all the Elements with hideElements
 const hiddenElements = document.querySelectorAll('.hiddenElement')
 hiddenElements.forEach((element) => observer.observe(element))
 
